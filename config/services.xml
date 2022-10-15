@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <defaults public="false" />
+
+        <service id="EMS\TableBundle\DataTableBuilder\DataTableBuilderInterface"
+                 alias="ems_table.data_table_builder.data_table_builder" />
+
+        <service id="ems_table.data_table_builder.data_table_builder"
+                 class="EMS\TableBundle\DataTableBuilder\DataTableBuilder">
+        </service>
+
+    </services>
+</container>
