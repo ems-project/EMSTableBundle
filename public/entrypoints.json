@@ -1,0 +1,9 @@
+{
+  "entrypoints": {
+    "datatable": {
+      "js": [
+        "/bundles/emstable/datatable.df373200.js"
+      ]
+    }
+  }
+}

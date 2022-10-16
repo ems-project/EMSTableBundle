@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "@symfony/webpack-encore": "^4.0.0",
+    "datatables.net": "^1.12.1",
+    "datatables.net-bs": "^1.12.1",
+    "lodash": "^4.17.21",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "typescript": "^4.8.4"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production"
+  }
+}
