@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace EMS\TableBundle\DataTableBuilder;
+namespace EMS\TableBundle\DataTable;
 
 class DataTableBuilder implements DataTableBuilderInterface
 {
