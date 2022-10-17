@@ -40,6 +40,11 @@
         "lock": false,
         "sort-packages": true
     },
+    "extra": {
+        "branch-alias": {
+            "dev-4.x": "4.x-dev"
+        }
+    },
     "scripts": {
         "phpcs": "php-cs-fixer fix",
         "phpstan": "phpstan analyse --memory-limit 1G",
