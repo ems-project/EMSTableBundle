@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <defaults public="false" />
+
+        <service alias="ems_table.data_table.builder" id="EMS\TableBundle\DataTable\Builder\DataTableBuilderInterface"/>
+        <service alias="ems_table.data_table.factory" id="EMS\TableBundle\DataTable\Factory\DataTableFactoryInterface"/>
+
+
+        <service id="ems_table.data_table.builder" class="EMS\TableBundle\DataTable\Builder\DataTableBuilder"/>
+        <service id="ems_table.data_table.factory" class="EMS\TableBundle\DataTable\Factory\DataTableFactory">
+            <argument type="service" id="ems_table.data_table.type.registry" />
+        </service>
+        <service id="ems_table.data_table.type.registry" class="EMS\TableBundle\DataTable\Type\DataTableTypeRegistry">
+            <argument type="tagged_iterator" tag="ems_table.datatable"/>
+        </service>
+
+
+
+        <service id="ems_table.data_table.render" class="EMS\TableBundle\DataTable\Render\DataTableRender">
+            <argument type="service" id="twig"/>
+        </service>
+        <service id="ems_table.twig.table_extension" class="EMS\TableBundle\Twig\TableExtension">
+            <tag name="twig.extension"/>
+        </service>
+        <service id="ems_table.twig.table_runtime" class="EMS\TableBundle\Twig\TableRuntime">
+            <argument type="service" id="ems_table.data_table.render"/>
+            <tag name="twig.runtime"/>
+        </service>
+
+    </services>
+</container>
