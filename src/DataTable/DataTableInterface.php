@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace EMS\TableBundle\DataTable;
 
-interface DataTableBuilderInterface
+interface DataTableInterface
 {
-    public function build(): void;
 }
